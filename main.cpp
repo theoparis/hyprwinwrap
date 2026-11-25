@@ -131,8 +131,8 @@ static std::vector<SBgWindowSpec> collectSpecs()
 {
     std::vector<SBgWindowSpec> specs;
 
-    const std::string legacyClass(gCfgClass->value());
-    const std::string legacyTitle(gCfgTitle->value());
+    const std::string legacyClass(gCfgClass ? gCfgClass->value() : "");
+    const std::string legacyTitle(gCfgTitle ? gCfgTitle->value() : "");
     if (!legacyClass.empty() || !legacyTitle.empty())
     {
         SBgWindowSpec legacy;
